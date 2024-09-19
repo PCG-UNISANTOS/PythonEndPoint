@@ -32,6 +32,16 @@ CREATE TABLE IF NOT EXISTS Investimento (
 );
 ''')
 
+# Criar tabela Usuario
+conn.execute('''
+CREATE TABLE IF NOT EXISTS Usuario (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    nome TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    token TEXT NOT NULL
+);
+''')
+
 
 print("Tables created successfully")
 conn.close()
