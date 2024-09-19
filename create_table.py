@@ -20,6 +20,18 @@ CREATE TABLE IF NOT EXISTS Categoria (
 );
 ''')
 
+# Criar tabela Investimento
+conn.execute('''
+CREATE TABLE IF NOT EXISTS Investimento (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    periodo TEXT,
+    valor REAL,
+    subcategoria INTEGER,
+    FOREIGN KEY (periodo) REFERENCES PibBrasil(periodo),
+    FOREIGN KEY (subcategoria) REFERENCES Categoria(id)
+);
+''')
+
 
 print("Tables created successfully")
 conn.close()
