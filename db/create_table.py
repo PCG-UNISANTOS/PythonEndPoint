@@ -2,8 +2,8 @@ import sqlite3
 import pandas as pd
 
 # Caminho do arquivo e nome do banco de dados
-file_path = './dados_filtrados_por_trimestre_PIB_ED.xlsx'
-db_path = 'database.db'
+file_path = './xlsx/dados_filtrados_por_trimestre_PIB_ED.xlsx'
+db_path = './db/database.db'
 
 # Carregar os dados do Excel
 df = pd.read_excel(file_path, sheet_name='dados_filtrados_por_trimestre_P')
